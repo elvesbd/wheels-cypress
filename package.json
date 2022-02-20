@@ -1,0 +1,20 @@
+{
+  "name": "training-wheels",
+  "version": "1.0.0",
+  "description": "Projeto sobre manipulacao de elementos da web com Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "keywords": [
+    "cypress",
+    "nodejs",
+    "training-wheels"
+  ],
+  "repository": "https://github.com/elvesbd/wheels-cypress.git",
+  "author": "Elves Brito",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^9.5.0"
+  }
+}
