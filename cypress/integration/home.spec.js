@@ -1,5 +1,5 @@
 it('Should open the home page', () => {
-  cy.visit('https://training-wheels-qaninja.herokuapp.com/')
+  cy.visit('/')
 
   cy.title()
     .should('eq', 'Training Wheels | QAninja') // eq = equal

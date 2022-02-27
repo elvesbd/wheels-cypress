@@ -1,5 +1,5 @@
 it('should be select the 5 best marvel movies', () => {
-  cy.visit('https://training-wheels-qaninja.herokuapp.com/checkboxes')
+  cy.visit('/checkboxes')
 
   const movies = [
     'avengers',
