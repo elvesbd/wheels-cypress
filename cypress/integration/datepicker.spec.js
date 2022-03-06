@@ -2,9 +2,9 @@ it('should be select birth data', () => {
   cy.visit('/datepicker')
 
   const date = {
-    month: 'nov',
-    year: '1984',
-    day: '30'
+    month: 'fev',
+    year: '1983',
+    day: '13'
   }
 
   
@@ -17,5 +17,5 @@ it('should be select birth data', () => {
   cy.get('.datepicker-nav-year').click()
   cy.contains('.datepicker-year span', date.year).click()
 
-  cy.contains('button[class=date-item]', new RegExp('^' + date.day + '$', 'g')).click()
+  cy.contains('.is-current-month button[class=date-item]', new RegExp('^' + date.day + '$', 'g')).click()
 });
