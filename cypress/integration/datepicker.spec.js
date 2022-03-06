@@ -2,10 +2,12 @@ it('should be select birth data', () => {
   cy.visit('/datepicker')
 
   const date = {
-    month: 'fev',
-    year: '1983',
-    day: '13'
+    month: 'nov',
+    year: '1984',
+    day: '30'
   }
+
+  
 
   cy.get('.datetimepicker-dummy-input').click()
 
@@ -15,5 +17,5 @@ it('should be select birth data', () => {
   cy.get('.datepicker-nav-year').click()
   cy.contains('.datepicker-year span', date.year).click()
 
-  cy.contains('button[class=date-item]', date.day).click()
+  cy.contains('button[class=date-item]', new RegExp('^' + date.day + '$', 'g')).click()
 });
