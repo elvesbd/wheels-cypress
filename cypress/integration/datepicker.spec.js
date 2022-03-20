@@ -7,8 +7,6 @@ it('should be select birth data', () => {
     day: '13'
   }
 
-  
-
   cy.get('.datetimepicker-dummy-input').click()
 
   cy.get('.datepicker-nav-month').click()
