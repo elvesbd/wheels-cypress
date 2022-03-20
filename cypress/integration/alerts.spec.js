@@ -22,3 +22,14 @@ it('should canceled the request', () => {
   cy.on('window:confirm', () => false)
   cy.get('#result').should('have.text', 'Mensagem não confirmada')
 });
+
+it('should display a welcome message with my name', () => {
+  cy.visit('/javascript_alerts')
+
+  cy.window().then(($win) => {
+    cy.stub($win, 'prompt').returns('Elves')
+    cy.contains('button', 'Prompt').click()
+  })
+
+  cy.get('#result').should('have.text', 'Olá, Elves')
+});
